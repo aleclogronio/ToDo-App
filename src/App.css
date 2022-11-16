@@ -1,0 +1,152 @@
+body{
+  font-family: 'Abel', sans-serif;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.App {
+  text-align: center;
+}
+.taskBg {
+  border: 1px solid #9C9C9C;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px 140px 10px 15px;
+  text-align: left;
+  font-size: 22px;
+  position: relative;
+}
+.taskBg div {
+  display: flex;
+  align-items: center;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  color: rgba(0, 0, 0, 0.822);
+  font-weight: 800;
+}
+.noTask{
+  font-family: 'Abel', sans-serif;
+  color: rgba(0, 0, 0, 0.822);
+  font-weight: 600;
+}
+
+.btn {
+  border: 1px solid rgba(0, 0, 0, 0.719);
+  background-color: #ffffff;
+  color: #000;
+  font-weight: 600;
+}
+.btn:hover,  .btn:active {
+  color: #ffffff;
+  background-color: #000 !important;
+  border-color: #000;
+}
+.btn:focus .btn:visited {
+  background-color: #ffffff;
+  color: #000;
+  border-color: #000; 
+}
+
+.taskNumber{
+  color: #9C9C9C;
+  border: 1px solid #9C9C9C;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  margin-right: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.taskBg .taskText{
+  flex: 1;
+}
+.taskBg .done .taskText{
+font-style: italic;
+text-decoration: line-through;
+opacity: 0.3;
+}
+.taskBg .iconsWrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: auto;
+  display: inline-block;
+}
+.taskBg .iconsWrap span{
+  display: inline-block;
+  margin: 0px 10px 0 10px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+
+}
+.taskBg .iconsWrap span:hover{
+  color: #000;
+}
+.mr-20{
+  margin-right: 20px;
+}
+.gltch{
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+gltch:before,
+gltch:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+gltch:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+gltch:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+
+
